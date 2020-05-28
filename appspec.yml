@@ -2,11 +2,11 @@ version: 0.0
 os: linux
 files:
   - source: app/
-    destination: /etc/
+    destination: /etc/deploy/app
   - source: Dockerfile 
-    destination: /etc/app
+    destination: /etc/deploy/
   - source: docker-compose.yml
-    destination: /etc/app 
+    destination: /etc/deploy/ 
 hooks:
   BeforeInstall:
     - location: scripts/beforeBuild.sh

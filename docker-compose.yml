@@ -8,13 +8,3 @@ services:
     ports:
       - "80:8000"
     container_name: webapp01
-
-    #  webapp02:
-    #    #    build: ./
-    #    image: globoapp:v1.0
-    #    ports:
-    #      - "8080:8000"
-    #    container_name: webapp02
-    #    depends_on: ['webapp01']
-
-    
