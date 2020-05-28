@@ -1,15 +1,15 @@
 version: 0.0
 os: linux
 files:
-  - source: app
-    destination: /etc/app
+  - source: app/
+    destination: /etc/
   - source: Dockerfile 
     destination: /etc/app
   - source: docker-compose.yml
     destination: /etc/app 
 hooks:
   BeforeInstall:
-    - location: scripts/servicesStatus.sh
+    - location: scripts/beforeBuild.sh
       timeout: 180
   AfterInstall:
     - location: scripts/servicesTest.sh
