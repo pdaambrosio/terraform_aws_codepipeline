@@ -1,0 +1,24 @@
+version: 0.0
+os: linux
+files:
+  - source: app
+    destination: /etc/app
+  - source: Dockerfile 
+    destination: /etc/app
+  - source: docker-compose.yml
+    destination: /etc/app 
+hooks:
+  BeforeInstall:
+    - location: scripts/servicesStatus.sh
+      timeout: 180
+  AfterInstall:
+    - location: scripts/serviceTest.sh
+      timeout: 180
+  ApplicationStart:
+    - location: scripts/buildImage.sh
+      timeout: 3600
+      runas: root
+  ValidateService:
+    - location: scripts/testApp.sh
+      timeout: 3600
+      runas: codedeployuser

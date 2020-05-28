@@ -1,0 +1,20 @@
+version: '3.6'
+services:
+  webapp01:
+    build: ./
+    image: globoapp:v1.0
+    deploy:
+      replicas: 3
+    ports:
+      - "80:8000"
+    container_name: webapp01
+
+    #  webapp02:
+    #    #    build: ./
+    #    image: globoapp:v1.0
+    #    ports:
+    #      - "8080:8000"
+    #    container_name: webapp02
+    #    depends_on: ['webapp01']
+
+    
