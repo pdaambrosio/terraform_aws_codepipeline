@@ -1,7 +1,7 @@
 FROM centos:7.8.2003
 
 RUN yum update -y && yum install epel-release -y && yum install python-pip -y && yum remove epel-release -y && yum clean all
-COPY app/requirements.txt /tmp/
+COPY requirements.txt /tmp/
 RUN pip install --upgrade pip && pip install --requirement /tmp/requirements.txt
 
 ENV AP_DIR="/app"
