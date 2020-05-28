@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker-compose -f /etc/app/docker-compose.yml up
+docker-compose -f /etc/deploy/docker-compose.yml up
