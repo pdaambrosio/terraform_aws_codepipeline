@@ -12,7 +12,7 @@ hooks:
     - location: scripts/servicesStatus.sh
       timeout: 180
   AfterInstall:
-    - location: scripts/serviceTest.sh
+    - location: scripts/servicesTest.sh
       timeout: 180
   ApplicationStart:
     - location: scripts/buildImage.sh
@@ -21,4 +21,3 @@ hooks:
   ValidateService:
     - location: scripts/testApp.sh
       timeout: 3600
-      runas: codedeployuser
