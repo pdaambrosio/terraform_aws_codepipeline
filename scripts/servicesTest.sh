@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run hello-world
+hello=$(docker run hello-world)
