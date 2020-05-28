@@ -1,4 +1,6 @@
 #!/bin/bash
 
-systemctl status docker
-
+docker=i$(systemctl status docker)
+codedeploy=$(systemctl status codedeploy-agent)
+compose=$(docker-compose version)
+error=$(systemctl status httpd)
