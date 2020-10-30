@@ -16,8 +16,8 @@ hooks:
       timeout: 180
   ApplicationStart:
     - location: scripts/buildImage.sh
-      timeout: 3600
+      timeout: 1800
       runas: root
   ValidateService:
-    - location: scripts/testApp.sh
-      timeout: 3600
+    - location: scripts/validApp.sh
+      timeout: 1800
