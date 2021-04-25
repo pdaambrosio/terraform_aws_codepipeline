@@ -1,2 +1,3 @@
-# awscode
-CodePipeline AWS
+# Terraform AWS Code
+
+Terraform Code Pipeline and Code Deploy
